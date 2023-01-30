@@ -1,0 +1,33 @@
+<ng-container *ngIf="canal" | async as canal>
+  <app-template-full-width [title]="canal.name">
+
+
+    <!-- {{this.content[0].content}} -->
+
+    <div *ngFor="let message of this.content">
+      <div class="d-flex flex-column">
+        <div class="User">{{message.user}} à {{message.date}} : </div>
+        <div class="Content">{{message.content}}</div>
+      </div>
+    </div>
+
+    <app-form-message [init]="filler" (submitted)="action($event)"></app-form-message>
+
+    <!--
+    <div *ngIf="content" | async as content>
+      {{this.content.content}}
+    </div>
+    -->
+
+  </app-template-full-width>
+</ng-container>
+
+
+<!--
+<ng-container *ngIf="canalObservable$" | async as canalObservable>
+  <app-template-full-width [title]="canalObservable$.value.name">
+    Contenu {{canalObservable$.value.name}}
+
+  </app-template-full-width>
+</ng-container>
+-->

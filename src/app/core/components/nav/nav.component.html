@@ -1,0 +1,15 @@
+<ul class="nav flex-column">
+  <div class="nav-link">Canaux</div>
+
+
+  <div class="canal" *ngIf="canaux$ |async as canaux">
+    <div *ngFor="let canal of canaux">
+      <li (click)="goToCanal(canal)" class="canal-elem">{{canal.name}}</li>
+
+    </div>
+
+  </div>
+
+</ul>
+
+<!-- <button (click)="incrementVersion()">increment</button> -->

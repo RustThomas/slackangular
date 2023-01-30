@@ -1,0 +1,21 @@
+.nav-link {
+  color: var(--app-light);
+}
+
+.canal {
+  color: var(--app-light);
+  padding-left: 5%;
+}
+
+.canal-elem:hover {
+  color: var(--app-primary);
+}
+
+.nav-link:hover {
+  color: var(--app-primary);
+}
+
+.active {
+  background: var(--app-light);
+  color: var(--app-primary);
+}
